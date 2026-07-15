@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siksha Sathi Azure Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #e2e8f0; 
+            border-radius: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #64748b; 
+            border-radius: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4 font-sans antialiased text-gray-800">
+
+    <main class="w-full max-w-4xl bg-slate-50 rounded-xl shadow-2xl overflow-hidden flex flex-col">
+        <header class="bg-gray-900 text-white p-6 border-b-4 border-blue-500">
+            <div class="flex flex-col items-center text-center space-y-4">
+                <img src="https://raw.githubusercontent.com/devopsinsiders/devopsinsiders/main/logo-light.png" alt="Logo" class="h-12 object-contain">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold tracking-wide">AI-Assisted Operations Automator Course Batch 18</h1>
+                    <p class="text-sm text-blue-300 font-medium mt-1">(DevSecOps, MLOps, AIOps)</p>
+                </div>
+                
+                <div class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                    ✨ India's Best Private Community ✨
+                </div>
+
+                <div class="flex flex-wrap gap-3 justify-center mt-2">
+                    <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-md shadow-sm border border-blue-500">
+                        GROUP: SIKSHA SATHI G0
+                    </span>
+                    <span class="bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-md shadow-sm border border-emerald-500">
+                        Lead: BHAKUA JI
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-6 md:p-8">
+            
+            <div id="view-legal" class="flex flex-col space-y-6 block">
+                <div class="flex items-center space-x-2 border-b pb-2">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h2 class="text-xl font-bold text-gray-800">Azure Infrastructure Access Agreement</h2>
+                </div>
+
+                <div class="bg-white border border-gray-300 rounded-lg p-5 h-48 overflow-y-auto custom-scroll shadow-inner">
+                    <ul class="space-y-3 text-sm text-gray-700 list-disc list-inside">
+                        <li><strong>Purpose:</strong> Access is provided strictly for educational and learning use only.</li>
+                        <li><strong>Prohibition:</strong> No commercial use, cryptocurrency mining, or illegal activities are permitted on this infrastructure.</li>
+                        <li><strong>Financial Liability:</strong> The user must create and maintain infrastructure during their assigned month. Failure to do so incurs a mandatory financial penalty of <span class="text-red-600 font-bold">₹1000</span>, payable to each respective group member.</li>
+                        <li><strong>Confidentiality:</strong> Under no circumstances can these credentials be shared outside the designated group.</li>
+                        <li><strong>Auditing:</strong> Administrators reserve the right to audit activity logs and may revoke access without prior notice if terms are violated.</li>
+                    </ul>
+                </div>
+
+                <label class="flex items-start space-x-3 cursor-pointer group">
+                    <input type="checkbox" id="agree-checkbox" class="mt-1 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <span class="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
+                        I acknowledge that I have read, understood, and agree to be bound by the terms outlined above.
+                    </span>
+                </label>
+
+                <button id="proceed-btn" disabled class="w-full py-3 px-4 bg-gray-400 text-white text-sm font-bold rounded-lg cursor-not-allowed transition-all duration-300 shadow">
+                    I Agree & Proceed
+                </button>
+            </div>
+
+            <div id="view-credentials" class="hidden flex-col space-y-6">
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b pb-4">
+                    <h2 class="text-xl font-bold text-gray-800">Assigned Access Credentials</h2>
+                    <span class="inline-flex items-center gap-1.5 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-300">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Agreement Digitally Signed
+                    </span>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-md">
+                    <h3 class="text-sm font-bold text-blue-800 mb-2">Login & MFA Setup Instructions:</h3>
+                    <ol class="list-decimal list-inside text-xs text-blue-900 space-y-1">
+                        <li>Navigate to <a href="https://portal.azure.com" target="_blank" class="underline font-semibold">portal.azure.com</a>.</li>
+                        <li>Enter your designated User Principal Name (Email) from the table below.</li>
+                        <li>Copy and enter the temporary password.</li>
+                        <li>Follow the on-screen prompts to register your device for Multi-Factor Authentication (MFA) via the Microsoft Authenticator App.</li>
+                    </ol>
+                </div>
+
+                <div class="overflow-x-auto bg-white rounded-lg shadow border border-gray-200">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">User Principal Name</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Authentication</th>
+                            </tr>
+                        </thead>
+                        <tbody id="credentials-tbody" class="bg-white divide-y divide-gray-200">
+                            </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Data Processing: Embedded valid JS Array
+        const credentialsData = [
+            {"username": "fullstack.awasthi@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "priya051198@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "sharma090010@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "pramodsviet@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "singhhimanshume@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "er.sandeepkumar15@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "mohitmishra.it@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "manrajnish@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "vineetmm26@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "vcdivakar@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "amanyadav27772@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "deependrasingh8998@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "skumar.aryan98@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "saratbisoyi@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "pbishwajit33@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "patil.neerajh05@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "satyandra.garvit@b18g0.online", "password": "Dhondhu@123"},
+            {"username": "pushpender.ece11@b18g0.online", "password": "Dhondhu@123"}
+        ];
+
+        // DOM Elements
+        const agreeCheckbox = document.getElementById('agree-checkbox');
+        const proceedBtn = document.getElementById('proceed-btn');
+        const viewLegal = document.getElementById('view-legal');
+        const viewCredentials = document.getElementById('view-credentials');
+        const credentialsTbody = document.getElementById('credentials-tbody');
+
+        // Checkbox Logic
+        agreeCheckbox.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                proceedBtn.disabled = false;
+                proceedBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+                proceedBtn.classList.add('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer', 'shadow-lg');
+            } else {
+                proceedBtn.disabled = true;
+                proceedBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+                proceedBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer', 'shadow-lg');
+            }
+        });
+
+        // Proceed Button Logic
+        proceedBtn.addEventListener('click', () => {
+            viewLegal.classList.add('hidden');
+            viewCredentials.classList.remove('hidden');
+            viewCredentials.classList.add('flex');
+            renderTable();
+        });
+
+        // Dynamic Table Rendering
+        function renderTable() {
+            credentialsTbody.innerHTML = '';
+            credentialsData.forEach((cred, index) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition-colors";
+                
+                tr.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                        ${cred.username}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        <div class="flex items-center justify-between w-48">
+                            <span id="pwd-${index}" class="font-mono text-lg tracking-widest text-gray-500 mt-1">••••••••</span>
+                            <button id="toggle-btn-${index}" onclick="togglePassword(${index}, '${cred.password}')" 
+                                class="ml-4 px-3 py-1 text-xs font-bold text-white bg-blue-600 rounded shadow hover:bg-blue-700 transition-colors">
+                                Reveal
+                            </button>
+                        </div>
+                    </td>
+                `;
+                credentialsTbody.appendChild(tr);
+            });
+        }
+
+        // Password Reveal/Hide Logic
+        function togglePassword(index, actualPassword) {
+            const pwdSpan = document.getElementById(`pwd-${index}`);
+            const toggleBtn = document.getElementById(`toggle-btn-${index}`);
+
+            if (toggleBtn.innerText.trim() === 'Reveal') {
+                pwdSpan.innerText = actualPassword;
+                pwdSpan.classList.remove('tracking-widest', 'text-gray-500', 'text-lg', 'mt-1');
+                pwdSpan.classList.add('tracking-normal', 'text-gray-900', 'text-sm');
+                
+                toggleBtn.innerText = 'Hide';
+                toggleBtn.classList.replace('bg-blue-600', 'bg-gray-700');
+                toggleBtn.classList.replace('hover:bg-blue-700', 'hover:bg-gray-800');
+            } else {
+                pwdSpan.innerText = '••••••••';
+                pwdSpan.classList.add('tracking-widest', 'text-gray-500', 'text-lg', 'mt-1');
+                pwdSpan.classList.remove('tracking-normal', 'text-gray-900', 'text-sm');
+                
+                toggleBtn.innerText = 'Reveal';
+                toggleBtn.classList.replace('bg-gray-700', 'bg-blue-600');
+                toggleBtn.classList.replace('hover:bg-gray-800', 'hover:bg-blue-700');
+            }
+        }
+    </script>
+    
+    </body>
+</html>

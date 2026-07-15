@@ -1,0 +1,40 @@
+Act as an expert frontend web developer. I need a single-file static HTML website to securely share Azure login credentials with a student group.
+
+Here are my specific inputs for this portal:
+- GROUP NUMBER: [INSERT GROUP NUMBER HERE, e.g., Group 0]
+- LEAD NAME: [INSERT LEAD NAME HERE, e.g., Aman]
+- CREDENTIALS: 
+[PASTE YOUR EXCEL DATA HERE - Just copy the rows of emails and passwords and paste them directly]
+
+INSTRUCTIONS FOR YOU (THE AI):
+1. Data Processing: Take the raw text provided in the CREDENTIALS section above and format it into a valid JavaScript array of objects structured as `[{"username": "email", "password": "password"}]`. Embed this array directly into the script tag of the HTML.
+
+2. UI/UX & Header Requirements:
+- Use Tailwind CSS (via CDN) for styling. The background should be a dark slate (`bg-slate-900`), and the main app container should be white/light gray (`bg-slate-50`).
+- Create a dark header section containing this logo: https://raw.githubusercontent.com/devopsinsiders/devopsinsiders/main/logo-light.png
+- Under the logo, display "Siksha Sathi • Batch 18".
+- Below that, create two styled badges side-by-side: One displaying the GROUP NUMBER and one displaying "Lead: " followed by the LEAD NAME provided above.
+
+3. Step 1: Legal Declaration (Default View):
+- Create an "Azure Infrastructure Access Agreement" section.
+- Put the following legal terms inside a fixed-height, scrollable text box with a custom styled scrollbar:
+  * Purpose: Educational/learning use only.
+  * Prohibition: No commercial use, crypto mining, or illegal activities.
+  * Financial Liability: The user must create and maintain infrastructure during their assigned month. Failure to do so incurs a mandatory financial penalty of ₹1000, payable to each respective group member.
+  * Confidentiality: Credentials cannot be shared outside the group.
+  * Auditing: Admin can audit logs and revoke access without notice.
+- Below the scroll box, add a mandatory checkbox: "I acknowledge that I have read, understood, and agree to be bound by the terms..."
+- Below the checkbox, add an "I Agree & Proceed" button. This button MUST be disabled (grayed out/unclickable) until the checkbox is checked. Once checked, make it turn blue and clickable.
+
+4. Step 2: Credentials Table (Hidden View):
+- When the user clicks "I Agree & Proceed", use JavaScript to hide the Legal Declaration section and reveal a Credentials Table section.
+- Display a success badge saying "Agreement Digitally Signed".
+- Create a clean table with columns: "User Principal Name" and "Authentication".
+- Populate the table dynamically using the JavaScript array you created in Step 1.
+
+5. Password Masking & Reveal Logic:
+- In the "Authentication" column, the password must be hidden by default behind dots (••••••••).
+- Next to the masked password, include a "Reveal" button.
+- When clicked, that specific row's password should become visible, and the button text should change to "Hide" with an inverted color scheme. Clicking "Hide" should mask it again.
+
+Output ONLY the complete, fully functional, single `index.html` file code. Do not include any explanations.

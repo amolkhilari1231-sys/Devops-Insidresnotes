@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhurandhar 2</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:black;
+  color:white;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('https://m.media-amazon.com/images/M/MV5B...jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.overlay{
+  background:rgba(0,0,0,0.7);
+  padding:50px;
+}
+
+.hero h1{
+  font-size:60px;
+  color:red;
+  text-shadow:0 0 20px red;
+}
+
+.btn{
+  padding:12px 25px;
+  background:red;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+/* GALLERY */
+.gallery{
+  padding:50px;
+  text-align:center;
+}
+
+.images{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
+.images img{
+  width:250px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.images img:hover{
+  transform:scale(1.1);
+}
+
+/* TRAILER */
+iframe{
+  width:80%;
+  height:400px;
+}
+
+footer{
+  padding:20px;
+  text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h1>DHURANDAR 2</h1>
+    <p>THE REVENGE 🔥</p>
+    <button class="btn" onclick="scrollDown()">Watch Trailer</button>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>🔥 MOVIE LOOKS</h2>
+
+  <div class="images">
+    <img src="https://via.placeholder.com/300x400">
+    <img src="https://via.placeholder.com/300x400">
+    <img src="https://via.placeholder.com/300x400">
+    <img src="https://via.placeholder.com/300x400">
+  </div>
+</section>
+
+<!-- TRAILER -->
+<section class="gallery" id="trailer">
+  <h2>🎬 TRAILER</h2>
+  <iframe src="https://www.youtube.com/embed/WW75GH4h2og"></iframe>
+</section>
+
+<footer>
+  <p>© Dhurandhar 2</p>
+</footer>
+
+<script>
+function scrollDown(){
+  document.getElementById("trailer").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
